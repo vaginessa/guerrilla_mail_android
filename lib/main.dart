@@ -22,6 +22,10 @@ class GuerrillaApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.deepPurple,
+      ),
       home: BlocProvider(
         create: (context) =>
             MasterDetailBloc()..add(const MasterDetailInitialization()),
