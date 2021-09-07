@@ -16,7 +16,7 @@ build:web:
     - flutter config --enable-web
     - flutter pub get
     - set +o pipefail
-    - flutter build web --base-href guerrilla_mail
+    - flutter build web --base-href /guerrilla_mail/
     - cp -r build/web guerrilla_mail-$VERSION
   artifacts:
     paths:
