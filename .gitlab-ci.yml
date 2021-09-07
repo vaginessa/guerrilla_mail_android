@@ -1,0 +1,35 @@
+image: cirrusci/flutter:beta
+
+stages:
+  - build
+  - deploy
+
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - guerrilla_mail-*
+
+build:web:
+  stage: build
+  script:
+    - flutter config --enable-web
+    - flutter pub get
+    - set +o pipefail
+    - flutter build web --base-href guerrilla_mail
+    - cp -r build/web guerrilla_mail-$VERSION
+  artifacts:
+    paths:
+      - guerrilla_mail-*
+
+pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - mkdir public
+    - cp -r guerrilla_mail-$VERSION/* public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
