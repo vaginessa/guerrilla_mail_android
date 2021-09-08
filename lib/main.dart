@@ -24,7 +24,7 @@ class GuerrillaApp extends StatelessWidget {
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.purple,
       ),
       home: BlocProvider(
         create: (context) =>

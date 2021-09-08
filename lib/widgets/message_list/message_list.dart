@@ -1,41 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guerrilla_mail/services/master_detail_bloc.dart';
+import 'package:guerrilla_mail/widgets/api_refresh_indicator.dart';
 
 import 'message_list_view.dart';
-import 'message_view_bottom.dart';
 import 'no_messages_found.dart';
 
-class MessageList extends StatefulWidget {
+class MessageList extends StatelessWidget {
   const MessageList({Key? key}) : super(key: key);
-
-  @override
-  State<MessageList> createState() => _MessageListState();
-}
-
-class _MessageListState extends State<MessageList> {
-  late MasterDetailBloc _bloc;
-
-  @override
-  void initState() {
-    super.initState();
-    _bloc = BlocProvider.of<MasterDetailBloc>(context);
-  }
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<MasterDetailBloc, MasterDetailState>(
       builder: (context, state) {
+        late Widget child;
         if (state is MasterDetailNoItemsState) {
-          return const NoMessagesFound();
+          if (state.loading) {
+            child = Container();
+          } else {
+            child = const NoMessagesFound();
+          }
+        } else {
+          child = MessageListView(state as MasterDetailMessageListState);
         }
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-                child: MessageListView(state as MasterDetailMessageListState)),
-            const MessageViewBottom(),
-          ],
+
+        return ApiRefreshIndicator(
+          child: child,
         );
       },
     );

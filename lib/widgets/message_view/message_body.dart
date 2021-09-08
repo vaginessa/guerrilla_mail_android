@@ -26,12 +26,10 @@ class _MessageBodyState extends State<MessageBody> {
       valueListenable: HiveBoxes.messages.listenable(),
       builder: (context, snapshot, w) {
         late Message message;
-        late bool cached;
         final id = widget.message.id;
         if (HiveBoxes.messages.containsKey(id)) {
           // using cached message
           message = HiveBoxes.messages.get(id)!;
-          cached = true;
         } else {
           // falling back to incomplete message
           message = widget.message;
@@ -39,7 +37,6 @@ class _MessageBodyState extends State<MessageBody> {
               .client
               .fetchEmail(id)
               .then((value) => HiveBoxes.messages.put(id, value));
-          cached = false;
         }
 
         return Padding(
