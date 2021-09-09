@@ -6,7 +6,7 @@ Build-Depends: debhelper (>=10), clang, cmake, meson, libgtk-3-dev, pkg-config
 Standards-Version: 4.3.0
 Homepage: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/
 
-Package: xournalpp-mobile
+Package: guerrilla-mail
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, xdg-user-dirs
 Description: Quickly receive anonymous and temporary mails.
