@@ -3,7 +3,7 @@ description: Quickly receive anonymous and temporary mails.
 
 publish_to: 'none'
 
-version: 0.1.2+3
+version: 0.1.3+4
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -55,6 +55,6 @@ flutter_icons:
   ios: true
   image_path: "assets/logo/logo-circle.png"
   adaptive_icon_background: "#673ab7"
-  adaptive_icon_foreground: "assets/logo/transparent.png"
+  adaptive_icon_foreground: "assets/logo/transparent-margin.png"
   image_path_ios: "assets/logo/logo-square.png"
   remove_alpha_ios: true

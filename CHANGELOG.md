@@ -9,27 +9,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--
+- 
 
 ### Changed
 
--
+- 
 
 ### Deprecated
 
--
+- 
 
 ### Removed
 
--
+- 
 
 ### Fixed
 
--
+- 
 
 ### Security
 
--
+- 
+
+## [0.1.3+4] - 2021-09-09
+
+### Fixed
+
+- Android icon padding
 
 ## [0.1.2+3] - 2021-09-09
 
@@ -51,7 +57,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Capability of reading mails for random addresses
 - Automatic refresh
 
-[Unreleased]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/compare/0.1.2+3...main
+[Unreleased]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/compare/0.1.3+4...main
+[0.1.3+4]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.2+3
 [0.1.2+3]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.2+3
 [0.1.1+2]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.1+2
 [0.1.0+1]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.0+1
