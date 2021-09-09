@@ -1,0 +1,7 @@
+build/linux/x64/release/bundle/guerrilla-mail opt/guerrilla-mail/
+build/linux/x64/release/bundle/lib/ opt/guerrilla-mail/
+build/linux/x64/release/bundle/data/ opt/guerrilla-mail/
+linux/guerrilla-mail usr/bin/
+linux/guerrilla-mail.desktop usr/share/applications/
+assets/logo/logo-circle.png usr/share/pixmaps/
+assets/logo/logo-circle.png usr/share/icons/hicolor/192x192/apps/

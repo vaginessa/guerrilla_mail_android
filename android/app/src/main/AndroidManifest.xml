@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cf.theonewiththebraid.guerrilla_mail">
    <application
-        android:label="guerrilla_mail"
+        android:label="Guerrilla Mail"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

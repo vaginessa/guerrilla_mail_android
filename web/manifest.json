@@ -1,12 +1,12 @@
 {
-    "name": "guerrilla_mail",
-    "short_name": "guerrilla_mail",
+    "name": "Guerrilla Mail",
+    "short_name": "Guerrilla",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
+    "background_color": "#673ab7",
+    "theme_color": "#320b86",
     "description": "Quickly receive anonymous and temporary mails.",
-    "orientation": "portrait-primary",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {

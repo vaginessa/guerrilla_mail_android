@@ -35,22 +35,48 @@ build:apk:
     - set +o pipefail
     - flutter build apk
     - set -o pipefail
-    - mv build/app/outputs/apk/release/app-release.apk guerrilla_mail-$VERSION.apk
+    - mv build/app/outputs/apk/release/app-release.apk guerrilla-mail-$VERSION.apk
   artifacts:
     paths:
-      - guerrilla_mail-*.apk
+      - guerrilla-mail-*.apk
+
+build:debian:
+  stage: build
+  image: ubuntu
+  script: |
+    export DEBIAN_FRONTEND=noninteractive
+    # required to upgrade ubuntu base due to incompatible libraries
+    apt update -qq
+    apt install -y -qq wget tar unzip zip lib32stdc++6 lib32z1 git clang cmake ninja-build pkg-config libgtk-3-dev curl dh-make meson
+    # flutter sdk setup
+    git clone -b beta https://github.com/flutter/flutter.git /flutter
+    export PATH=$PATH:/flutter/bin
+    flutter config --enable-linux-desktop
+    sed -i "s/DATE/$(date -R)/g" debian/changelog
+    sed -i "s/VERSION/$VERSION/g" debian/changelog
+    dpkg-buildpackage
+    mv ../guerrilla-mail_*.deb guerrilla-mail-$VERSION.deb
+  artifacts:
+    paths:
+      - guerrilla-mail-*.deb
 
 build:linux:
   stage: build
-  script:
-    - flutter config --enable-linux-desktop
-    - flutter pub get
-    - set +o pipefail
-    - flutter build linux
-    - cp -r build/linux/x64/release/bundle guerrilla_mail-linux-$VERSION
+  image: snapcore/snapcraft:edge
+  script: |
+    # required to upgrade ubuntu base due to incompatible libraries
+    sed -i "s/xenial/focal/g" /etc/apt/sources.list
+    apt update -qq
+    apt install -y -qq wget tar unzip zip lib32stdc++6 lib32z1 git clang cmake ninja-build pkg-config libgtk-3-dev curl
+    # flutter sdk setup
+    git clone -b beta https://github.com/flutter/flutter.git /flutter
+    export PATH=$PATH:/flutter/bin
+    flutter config --enable-linux-desktop
+    flutter build linux
+    - cp -r build/linux/x64/release/bundle guerrilla-mail-linux-$VERSION
   artifacts:
     paths:
-      - guerrilla_mail-linux-*
+      - guerrilla-mail-linux-*
 
 pages:
   stage: deploy

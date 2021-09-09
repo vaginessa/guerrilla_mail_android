@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Guerrilla Mail
+Comment=Quickly receive anonymous and temporary mails.
+Keywords=Mail; Spam;
+Exec=guerrilla-mail
+Terminal=false
+Icon=guerrilla-mail
+Type=Application
+Categories=Office;GNOME;GTK;
