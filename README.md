@@ -1,10 +1,19 @@
 # Guerrilla Mail Mobile - Your unofficial Guerrilla Mail client
 
+![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/TheOneWithTheBraid/guerrilla_mail/main?style=for-the-badge) ![F-Droid](https://img.shields.io/f-droid/v/cf.theonewiththebraid.guerrilla_mail?style=for-the-badge)
+
 Quickly receive anonymous and temporary mails using [Guerrilla Mail](https://guerrillamail.com/).
 
 ## Try it out
 
-Visit [the web version](https://theonewiththebraid.gitlab.io/guerrilla_mail/).
+- Visit [the web version](https://theonewiththebraid.gitlab.io/guerrilla_mail/).
+- [Get it on F-Droid](https://f-droid.org/packages/cf.theonewiththebraid.guerrilla_mail/)
+- [Direct download APK](https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/jobs/artifacts/main/browse?job=build%3Aapk)
+- [Direct download Linux binaries](https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/jobs/artifacts/main/browse?job=build%3Alinux)
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
 
 ## Build yourself
 

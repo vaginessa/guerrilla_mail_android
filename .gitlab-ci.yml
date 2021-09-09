@@ -1,5 +1,12 @@
 image: cirrusci/flutter:beta
 
+before_script:
+  - echo "$keybase64" > ./keybase64
+  - mkdir -p /builds/
+  - base64 -d ./keybase64 > /builds/android.jks
+  - echo "$KEYPROPERTIES" > ./android/key.properties
+  - export VERSION=$(cat pubspec.yaml | grep version | awk '{ print $2 }' | cut -f1 -d "+")
+
 stages:
   - build
   - deploy
@@ -17,17 +24,42 @@ build:web:
     - flutter pub get
     - set +o pipefail
     - flutter build web --base-href /guerrilla_mail/
-    - cp -r build/web guerrilla_mail-$VERSION
+    - cp -r build/web guerrilla_mail-web-$VERSION
   artifacts:
     paths:
       - guerrilla_mail-*
+
+build:apk:
+  stage: build
+  script:
+    - set +o pipefail
+    - flutter build apk
+    - set -o pipefail
+    - mv build/app/outputs/apk/release/app-release.apk guerrilla_mail-$VERSION.apk
+  artifacts:
+    paths:
+      - guerrilla_mail-*.apk
+
+build:linux:
+  stage: build
+  script:
+    - flutter config --enable-linux-desktop
+    - flutter pub get
+    - set +o pipefail
+    - flutter build linux
+    - cp -r build/linux/x64/release/bundle guerrilla_mail-linux-$VERSION
+  artifacts:
+    paths:
+      - guerrilla_mail-linux-*
 
 pages:
   stage: deploy
   image: alpine:latest
   script:
     - mkdir public
-    - cp -r guerrilla_mail-$VERSION/* public/
+    - cp -r guerrilla_mail-web-$VERSION/* public/
+  dependencies:
+    - build:web
   artifacts:
     paths:
       - public
