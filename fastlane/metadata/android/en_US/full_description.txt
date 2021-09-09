@@ -1,0 +1,5 @@
+Quickly receive anonymous and temporary mails using https://guerrillamail.com/.
+
+This application is a simple approach to use Guerrilla Mail as a real mailing service for all kind of mails.
+
+This mobile app is quite new and not yet ready, so don't expect miracles.
