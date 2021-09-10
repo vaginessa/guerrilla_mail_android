@@ -51,7 +51,6 @@ build:debian:
     # flutter sdk setup
     git clone -b beta https://github.com/flutter/flutter.git /flutter
     export PATH=$PATH:/flutter/bin
-    flutter config --enable-linux-desktop
     sed -i "s/DATE/$(date -R)/g" debian/changelog
     sed -i "s/VERSION/$VERSION/g" debian/changelog
     dpkg-buildpackage
@@ -73,7 +72,7 @@ build:linux:
     export PATH=$PATH:/flutter/bin
     flutter config --enable-linux-desktop
     flutter build linux
-    - cp -r build/linux/x64/release/bundle guerrilla-mail-linux-$VERSION
+    cp -r build/linux/x64/release/bundle guerrilla-mail-linux-$VERSION
   artifacts:
     paths:
       - guerrilla-mail-linux-*

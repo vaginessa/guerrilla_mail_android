@@ -7,4 +7,6 @@
 	dh $@
 
 build:
+    flutter config --enable-linux-desktop
+	flutter pub get
 	flutter build linux
