@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import 'pages/hive/hive_boxes.dart';
+import 'hive/hive_boxes.dart';
 import 'pages/home_page/home_page.dart';
 import 'services/master_detail_bloc.dart';
 

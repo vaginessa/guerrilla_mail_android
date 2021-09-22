@@ -45,6 +45,7 @@ class _MessageListViewState extends State<MessageListView> {
       grabbingHeight: kBottomSheetGrabbingHeight,
       sheetBelow: SnappingSheetContent(
         childScrollController: _scrollController,
+        draggable: true,
         child: AccountBottomBar(controller: _scrollController),
       ),
     );

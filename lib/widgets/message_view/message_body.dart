@@ -4,7 +4,7 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
-import 'package:guerrilla_mail/pages/hive/hive_boxes.dart';
+import 'package:guerrilla_mail/hive/hive_boxes.dart';
 import 'package:guerrilla_mail/services/master_detail_bloc.dart';
 import 'package:guerrilla_mail_api/guerrilla_mail_api.dart';
 import 'package:hive_flutter/hive_flutter.dart';

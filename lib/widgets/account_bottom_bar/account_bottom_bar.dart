@@ -14,23 +14,24 @@ class AccountBottomBar extends StatefulWidget {
 class _AccountBottomBarState extends State<AccountBottomBar> {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<MasterDetailBloc, MasterDetailState>(
-      builder: (context, state) {
-        // TODO(TheOneWithTheBraid): Migrate to snappy bottom sheet
-        return ListView(
-          controller: widget.controller,
-          children: [
-            Tooltip(
-              message: 'Tap to copy',
-              child: ListTile(
-                title: Text(state.email?.emailAddress ?? '...'),
-                subtitle: const Text('Your disposable address'),
-                onTap: () => _copyAddress(state.email?.emailAddress),
+    return Material(
+      child: BlocBuilder<MasterDetailBloc, MasterDetailState>(
+        builder: (context, state) {
+          return ListView(
+            controller: widget.controller,
+            children: [
+              Tooltip(
+                message: 'Tap to copy',
+                child: ListTile(
+                  title: Text(state.email?.emailAddress ?? '...'),
+                  subtitle: const Text('Your disposable address'),
+                  onTap: () => _copyAddress(state.email?.emailAddress),
+                ),
               ),
-            ),
-          ],
-        );
-      },
+            ],
+          );
+        },
+      ),
     );
   }
 

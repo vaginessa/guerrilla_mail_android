@@ -31,6 +31,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - 
 
+## [0.1.4+5] - 2021-09-22
+
+### Fixed
+
+- Android internet permission
+- Transparent bottom sheet
+
 ## [0.1.3+4] - 2021-09-09
 
 ### Fixed
@@ -57,8 +64,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Capability of reading mails for random addresses
 - Automatic refresh
 
-[Unreleased]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/compare/0.1.3+4...main
-[0.1.3+4]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.2+3
+[Unreleased]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/compare/0.1.4+5...main
+[0.1.4+5]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.4+5
+[0.1.3+4]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.3+4
 [0.1.2+3]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.2+3
 [0.1.1+2]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.1+2
 [0.1.0+1]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.0+1
