@@ -31,6 +31,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - 
 
+## [0.1.4+6] - 2021-09-22
+
+### Fixed
+
+- Invalid fastlane metadata
+
 ## [0.1.4+5] - 2021-09-22
 
 ### Fixed
@@ -64,7 +70,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Capability of reading mails for random addresses
 - Automatic refresh
 
-[Unreleased]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/compare/0.1.4+5...main
+[Unreleased]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/compare/0.1.4+6...main
+[0.1.4+6]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.4+6
 [0.1.4+5]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.4+5
 [0.1.3+4]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.3+4
 [0.1.2+3]: https://gitlab.com/TheOneWithTheBraid/guerrilla_mail/-/tags/0.1.2+3
